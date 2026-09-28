@@ -263,3 +263,10 @@ html.js .carousel-fallback{display:none}
   html.js h1.split .ch{opacity:1;transform:none;animation:none}
   .rotor-track{transition:none}
 }
+/* компьютер: фото справа в своих пропорциях, а не на весь экран */
+@media (min-width:900px){
+  .hero-bg{left:auto;right:0;width:min(46vw,640px);object-position:50% 25%;animation-name:breatheSoft}
+  .hero-veil{background:linear-gradient(90deg,var(--bg) 0%,var(--bg) calc(100% - min(46vw,640px)),rgba(7,26,24,.35) calc(100% - min(46vw,640px) + 180px),rgba(7,26,24,0) 100%),linear-gradient(180deg,transparent 70%,var(--bg) 100%)}
+  html.light .hero-veil{background:linear-gradient(90deg,var(--bg) 0%,var(--bg) calc(100% - min(46vw,640px)),rgba(250,246,241,.35) calc(100% - min(46vw,640px) + 180px),rgba(250,246,241,0) 100%),linear-gradient(180deg,transparent 70%,var(--bg) 100%)}
+}
+@keyframes breatheSoft{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
